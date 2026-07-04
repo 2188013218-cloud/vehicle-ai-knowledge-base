@@ -1,6 +1,10 @@
-# 🚗 AI 车辆故障知识库
+# 🚗 Vehicle AI Knowledge Base
 
-> 车辆工程 × AI — 用 RAG 技术构建的智能车辆维修手册问答系统
+> 车辆工程 × AI — Vehicle AI Knowledge Base 是一个基于大语言模型（LLM）的汽车维修知识库系统。
+> 本项目利用 RAG（检索增强生成）架构，将车辆维修手册、OBD-II 故障码、技术文档等资料构建为可检索的知识库，在用户提问时优先检索相关内容，再结合大语言模型生成更加准确、可靠的回答，而不是依赖模型自身记忆。
+> 传统 LLM 在汽车维修领域容易出现幻觉（Hallucination），无法保证回答来源可靠。
+
+>本项目希望通过 RAG 技术，使 AI 能够基于真实维修文档进行回答，提高专业领域问答的准确性。
 
 上传 PDF 维修手册 → AI 自动阅读 → 提问即可获取答案
 
@@ -23,7 +27,7 @@ python main.py
 |------|------|
 | **Python** | 开发语言 |
 | **FastAPI** | Web 框架，提供 RESTful API |
-| **FAISS** | 向量检索引擎（毫秒级检索） |
+| **FAISS** | 向量检索引擎 |
 | **Sentence-Transformers** | 本地文本向量化模型 |
 | **OpenAI / FreellmAPI** | LLM 问答接口 |
 | **RAG 架构** | 检索增强生成 |

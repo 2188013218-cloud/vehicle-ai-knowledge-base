@@ -22,3 +22,6 @@ data/uploads/*.pdf
 # 测试脚本（不包含在正式仓库里）
 test_chunk.py
 test_all.py
+
+# 生成的索引文件
+data/faiss_index/

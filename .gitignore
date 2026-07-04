@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# 虚拟环境
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# 上传的 PDF（太大了不上传）
+data/uploads/*.pdf
+
+# 测试脚本（不包含在正式仓库里）
+test_chunk.py
+test_all.py

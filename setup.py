@@ -46,7 +46,9 @@ if "LLM_API_KEY" in config_content:
     # 提取 API Key 值
     for line in config_content.split("\n"):
         if line.strip().startswith("LLM_API_KEY"):
-            key_value = line.split("=")[1].strip().strip('"').strip("'")
+            key_value = line.split("=", 1)[1].strip()
+            # 去掉引号和注释
+            key_value = key_value.split("#")[0].strip().strip('"').strip("'")
             placeholder_values = ["你的 API Key", "请替换为你的 API Key", "your-api-key", ""]
             if key_value in placeholder_values or len(key_value) < 5:
                 has_valid_key = False

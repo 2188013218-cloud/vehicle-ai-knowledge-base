@@ -1,6 +1,6 @@
 # 🚗 Vehicle AI Knowledge Base
 
-> 车辆工程 × AI — Vehicle AI Knowledge Base 是一个基于大语言模型（LLM）的汽车维修知识库系统。
+> Vehicle AI Knowledge Base 是一个基于大语言模型（LLM）的汽车维修知识库系统。
 > 本项目利用 RAG（检索增强生成）架构，将车辆维修手册、OBD-II 故障码、技术文档等资料构建为可检索的知识库，在用户提问时优先检索相关内容，再结合大语言模型生成更加准确、可靠的回答，而不是依赖模型自身记忆。
 > 传统 LLM 在汽车维修领域容易出现幻觉（Hallucination），无法保证回答来源可靠。
 
@@ -10,9 +10,9 @@
 
 ## 快速开始
 
-```bash
+```bash   ”“bash
 # 1. 安装依赖
-pip install -r requirements.txt
+pip install -r requirements.txtPIP install -r requirements.txt
 
 # 2. 启动服务
 python main.py

@@ -1,25 +1,49 @@
-# 🚗 Vehicle AI Knowledge Base
+# 🚗 AI 车辆故障知识库
 
-> Vehicle AI Knowledge Base 是一个基于大语言模型（LLM）的汽车维修知识库系统。
-> 本项目利用 RAG（检索增强生成）架构，将车辆维修手册、OBD-II 故障码、技术文档等资料构建为可检索的知识库，在用户提问时优先检索相关内容，再结合大语言模型生成更加准确、可靠的回答，而不是依赖模型自身记忆。
-> 传统 LLM 在汽车维修领域容易出现幻觉（Hallucination），无法保证回答来源可靠。
-
->本项目希望通过 RAG 技术，使 AI 能够基于真实维修文档进行回答，提高专业领域问答的准确性。
+> 车辆工程 × AI — 用 RAG 技术构建的智能车辆维修手册问答系统
 
 上传 PDF 维修手册 → AI 自动阅读 → 提问即可获取答案
 
 ## 快速开始
 
-```bash   ”“bash
-# 1. 安装依赖
-pip install -r requirements.txtPIP install -r requirements.txt
+### 方式一：自动配置（推荐）
 
-# 2. 启动服务
+```bash
+# 1. 下载项目
+git clone https://github.com/2188013218-cloud/vehicle-ai-knowledge-base.git
+cd vehicle-ai-knowledge-base
+
+# 2. 运行配置向导
+python setup.py
+
+# 3. 安装依赖
+pip install -r requirements.txt
+
+# 4. 启动服务
 python main.py
 
-# 3. 打开浏览器
-# 访问 http://localhost:8000
+# 5. 打开浏览器访问 http://localhost:8000
 ```
+
+### 方式二：手动配置
+
+```bash
+# 1. 复制配置文件
+cp config.example.py config.py
+# 然后编辑 config.py，填入你的 API 地址和 Key
+
+# 2. 安装依赖
+pip install -r requirements.txt
+
+# 3. 启动服务
+python main.py
+
+# 4. 打开浏览器访问
+# http://localhost:8000
+```
+
+> **注意**：首次运行会自动下载向量模型（约 80MB），之后离线可用。
+> 如果下载失败，科学上网后重试即可。
 
 ## 技术栈
 
@@ -27,7 +51,7 @@ python main.py
 |------|------|
 | **Python** | 开发语言 |
 | **FastAPI** | Web 框架，提供 RESTful API |
-| **FAISS** | 向量检索引擎 |
+| **FAISS** | 向量检索引擎（毫秒级检索） |
 | **Sentence-Transformers** | 本地文本向量化模型 |
 | **OpenAI / FreellmAPI** | LLM 问答接口 |
 | **RAG 架构** | 检索增强生成 |
